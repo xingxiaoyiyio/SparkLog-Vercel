@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 50%, #ecfdf5 100%);
+  background-attachment: fixed;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #8b5cf6, #10b981);
+}
+
+.bg-gradient-aurora {
+  background-image: linear-gradient(to right bottom, #8b5cf6, #10b981);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@layer components {
+  /* Markdown Styles to fix "Chaos" from Tailwind Preflight */
+  .markdown-content p {
+    margin-bottom: 0.5rem;
+  }
+  .markdown-content p:last-child {
+    margin-bottom: 0;
+  }
+  .markdown-content ul, .markdown-content ol {
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+  }
+  .markdown-content li {
+    margin-bottom: 0.25rem;
+  }
+  .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .markdown-content strong {
+    font-weight: 600;
+  }
+  .markdown-content blockquote {
+    border-left: 3px solid rgba(139,92,246, 0.3);
+    padding-left: 0.75rem;
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
