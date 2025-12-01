@@ -61,3 +61,25 @@ next-env.d.ts
 
 # OS files
 Thumbs.db
+
+# Next.js build directory
+.next/
+.next-export/
+out/
+
+# Diagnostic files
+diagnose-gemini-api.js
+test-api.js
+test-fix.js
+test-gemini-connection.js
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
